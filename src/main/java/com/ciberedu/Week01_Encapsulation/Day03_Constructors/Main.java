@@ -8,5 +8,9 @@ public class Main {
 
         e1.printDetails();
         e2.printDetails();
+
+        Employee e3 = new Employee();
+
+        e3.printDetails();
     }
 }

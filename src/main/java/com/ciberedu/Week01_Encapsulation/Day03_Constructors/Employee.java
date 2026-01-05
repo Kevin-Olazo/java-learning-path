@@ -27,6 +27,10 @@ public class Employee {
         this(employeeId, name, 3000.0, "Unassigned");
     }
 
+    public Employee(){
+        this(0,"Guest");
+    }
+
     public int getEmployeeId() {
         return employeeId;
     }
