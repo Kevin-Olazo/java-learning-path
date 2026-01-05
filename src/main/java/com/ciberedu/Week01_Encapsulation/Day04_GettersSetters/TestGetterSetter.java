@@ -1,6 +1,10 @@
 package com.ciberedu.Week01_Encapsulation.Day04_GettersSetters;
 
+import java.time.LocalDate;
+
 public class TestGetterSetter {
+
+
 
     public static void main(String[] args) {
         Car car = new Car("Charger", "Yellow", 10000);
@@ -11,6 +15,11 @@ public class TestGetterSetter {
 
         System.out.println(car.getModel());
 
+        Person p1 = new Person("Kevin", "45612387", LocalDate.of(1995,10,7));
+        Person p2 = new Person("Daniel", "45236587", LocalDate.of(2004, 12, 29));
+
+        System.out.println(p1.getAge());
+        System.out.println(p2.getAge());
 
         ImmutablePoint ip = new ImmutablePoint(2.5, 6.7);
 
