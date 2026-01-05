@@ -21,10 +21,10 @@ public class Book {
     }
 
     public void printDetails() {
-        System.out.println("Book info" +
+        System.out.println(
                 "Book title: " + title +
-                "Book Author: " + author +
-                "Total pages: " + pageCount);
+                " Book Author: " + author +
+                " Total pages: " + pageCount);
     }
 
     public boolean isRead() {
