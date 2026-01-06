@@ -23,6 +23,8 @@ public class LibrarySystem {
         alice.borrowBook(b1);
 
         System.out.println(b1.isAvailable());
+
+        bob.borrowBook(b1);
     }
 }
 

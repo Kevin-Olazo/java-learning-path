@@ -35,7 +35,7 @@ public class Member {
 
     public boolean borrowBook(Book book) {
         if (!book.isAvailable()) {
-            System.out.println("Book is not available");
+            System.out.println(book.getTitle() + " is not available");
             return false;
         }
         // TODO: Loop through the array.
