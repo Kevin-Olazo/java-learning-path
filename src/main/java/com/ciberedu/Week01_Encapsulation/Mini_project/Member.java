@@ -48,6 +48,7 @@ public class Member {
             }
         }
         // If the loop finishes, and you found no space, return false.
+        System.out.println("Book is not available");
         return false;
     }
 }
