@@ -34,21 +34,24 @@ public class Member {
     }
 
     public boolean borrowBook(Book book) {
+        if (!book.isAvailable()) {
+            System.out.println("Book is not available");
+            return false;
+        }
         // TODO: Loop through the array.
-        // 1. Find the first slot that is null.
         for (int i = 0; i < borrowedBooks.length; i++) {
+            // 1. Find the first slot that is null.
             if (borrowedBooks[i] == null) {
                 // 2. Assign the book to that slot.
-                if (book.isAvailable()){
-                    borrowedBooks[i] = book;
-                    book.setAvailable(false);
-                    // 3. Return true (success).
-                    return true;
-                }
+                borrowedBooks[i] = book;
+                book.setAvailable(false);
+                // 3. Return true (success).
+                System.out.println(name + " has borrowed " + book.getTitle());
+                return true;
             }
         }
         // If the loop finishes, and you found no space, return false.
-        System.out.println("Book is not available");
+        System.out.println("You have reached the maximum limit of books you can borrow.");
         return false;
     }
 }
