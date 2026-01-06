@@ -19,13 +19,10 @@ public class Library {
     }
 
     public Book findBook(String isbn) {
-        for (Book b : bookCollection) {
-            if (b == null) {
-                return null;
-            } else if (b.getISBN().equals(isbn)) {
-                return b;
+        for (int i = 0; i < bookCount; i++) {
+            if (bookCollection[i].getISBN().equals(isbn)) {
+                return bookCollection[i];
             }
-
         }
         System.out.println("Book not found");
         return null;
