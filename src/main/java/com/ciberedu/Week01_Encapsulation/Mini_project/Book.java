@@ -18,20 +18,20 @@ public class Book {
         this.isAvailable = true;
     }
 
-
-
     private void setTitle(String title) {
         if (title == null || title.isEmpty()){
             this.title = "Unknown title";
+        } else {
+            this.title = title;
         }
-        this.title = title;
     }
 
     private void setAuthor(String author) {
         if (author == null || author.isEmpty()){
-            this.title = "Unknown author";
+            this.author = "Unknown author";
+        } else {
+            this.author = author;
         }
-        this.author = author;
     }
 
     private void setTotalPages(int totalPages) {
@@ -41,7 +41,7 @@ public class Book {
         this.totalPages = totalPages;
     }
 
-    private void setAvailable(boolean available) {
+    public void setAvailable(boolean available) {
         isAvailable = available;
     }
 
