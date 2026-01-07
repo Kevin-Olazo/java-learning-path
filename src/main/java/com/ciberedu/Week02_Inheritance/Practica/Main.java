@@ -10,6 +10,8 @@ import com.ciberedu.Week02_Inheritance.Practica.E4.ProductoPerecible;
 import com.ciberedu.Week02_Inheritance.Practica.E5.Laptop;
 import com.ciberedu.Week02_Inheritance.Practica.E6.Carro;
 import com.ciberedu.Week02_Inheritance.Practica.E6.Motocicleta;
+import com.ciberedu.Week02_Inheritance.Practica.E7.Gato;
+import com.ciberedu.Week02_Inheritance.Practica.E7.Perro;
 
 import java.time.LocalDate;
 
@@ -69,6 +71,16 @@ public class Main {
         car1.info();
         moto1.info();
 
+        // PRACTICA 7:
+        // Perro, Gato extends Animal
+        System.out.println("Practica 7:");
+        Perro chato = new Perro("chato", 10, "Pequines");
+        Gato pisco = new Gato("pisco", 12, true);
+
+        chato.describe();
+        pisco.describe();
+
+        // PRACTICA 8:
 
     }
 }
