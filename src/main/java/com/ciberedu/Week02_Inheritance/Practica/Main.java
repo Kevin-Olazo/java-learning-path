@@ -3,6 +3,8 @@ package com.ciberedu.Week02_Inheritance.Practica;
 
 import com.ciberedu.Week02_Inheritance.Practica.E1.Estudiante;
 import com.ciberedu.Week02_Inheritance.Practica.E1.Persona;
+import com.ciberedu.Week02_Inheritance.Practica.E11.Report;
+import com.ciberedu.Week02_Inheritance.Practica.E11.TextDocument;
 import com.ciberedu.Week02_Inheritance.Practica.E2.Empleado;
 import com.ciberedu.Week02_Inheritance.Practica.E2.EmpleadoTiempoCompleto;
 import com.ciberedu.Week02_Inheritance.Practica.E3.CuentaAhorro;
@@ -57,7 +59,7 @@ public class Main {
         // PRACTICA 4:
         // ProductoPerecible extends Producto
         System.out.println("Practica 4:");
-        ProductoPerecible proper = new ProductoPerecible("Leche", 10.20, LocalDate.of(2024,10,3));
+        ProductoPerecible proper = new ProductoPerecible("Leche", 10.20, LocalDate.of(2024, 10, 3));
 
         System.out.println(proper.isExpired());
 
@@ -70,7 +72,7 @@ public class Main {
         // PRACTICA 6:
         // Carro, Motocicleta extends Vehiculo
         System.out.println("Practica 6:");
-        Carro car1 = new Carro("Toyota", "Yaris", 2014,4);
+        Carro car1 = new Carro("Toyota", "Yaris", 2014, 4);
         Motocicleta moto1 = new Motocicleta("Yamaha", "R120", 2018, false);
 
         car1.info();
@@ -109,6 +111,11 @@ public class Main {
 
         children.imprimir();
 
-        // PRACTICA 10:
+        // PRACTICA 11:
+        TextDocument td = new TextDocument("Prueba", "Hola, esto es una prueba para contar palabras");
+        Report rp = new Report("ReportePrueba", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "Unknown", "IT");
+
+        System.out.println(td.wordCount());
+        System.out.println(rp.wordCount());
     }
 }
