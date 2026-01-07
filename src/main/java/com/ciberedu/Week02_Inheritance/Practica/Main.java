@@ -7,6 +7,8 @@ import com.ciberedu.Week02_Inheritance.Practica.E11.Report;
 import com.ciberedu.Week02_Inheritance.Practica.E11.TextDocument;
 import com.ciberedu.Week02_Inheritance.Practica.E12.Address;
 import com.ciberedu.Week02_Inheritance.Practica.E12.Employee;
+import com.ciberedu.Week02_Inheritance.Practica.E13.Circle;
+import com.ciberedu.Week02_Inheritance.Practica.E13.Rectangle;
 import com.ciberedu.Week02_Inheritance.Practica.E2.Empleado;
 import com.ciberedu.Week02_Inheritance.Practica.E2.EmpleadoTiempoCompleto;
 import com.ciberedu.Week02_Inheritance.Practica.E3.CuentaAhorro;
@@ -124,10 +126,19 @@ public class Main {
         rp.printHeader();
 
         // PRACTICA 12:
+        System.out.println("Practica 12:");
         Address address = new Address("Cayran", "Lima");
         Employee employee = new Employee(address, "123");
 
         employee.fullInfo();
 
+        // PRACTICA 13:
+        //
+        System.out.println("Practica 13:");
+        Circle circle = new Circle("Red", 20);
+        Rectangle rectangle = new Rectangle("Blue", 100, 50);
+
+        System.out.println(circle.getArea());
+        System.out.println(rectangle.getArea());
     }
 }
