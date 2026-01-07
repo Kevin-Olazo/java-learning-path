@@ -13,6 +13,7 @@ import com.ciberedu.Week02_Inheritance.Practica.E6.Motocicleta;
 import com.ciberedu.Week02_Inheritance.Practica.E7.Gato;
 import com.ciberedu.Week02_Inheritance.Practica.E7.Perro;
 import com.ciberedu.Week02_Inheritance.Practica.E8.Child;
+import com.ciberedu.Week02_Inheritance.Practica.E9.Children;
 
 import java.time.LocalDate;
 
@@ -82,10 +83,18 @@ public class Main {
         pisco.describe();
 
         // PRACTICA 8:
+        // Child extends Base
         System.out.println("Practica 8:");
         Child child = new Child();
         child.intentarAcceso();
 
+        // PRACTICA 9:
+        // Children extends Parent
+        System.out.println("Practica 9:");
+        Children children = new Children();
 
+        children.imprimir();
+
+        // PRACTICA 10:
     }
 }
