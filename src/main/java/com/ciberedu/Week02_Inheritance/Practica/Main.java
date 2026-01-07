@@ -9,6 +9,8 @@ import com.ciberedu.Week02_Inheritance.Practica.E12.Address;
 import com.ciberedu.Week02_Inheritance.Practica.E12.Employee;
 import com.ciberedu.Week02_Inheritance.Practica.E13.Circle;
 import com.ciberedu.Week02_Inheritance.Practica.E13.Rectangle;
+import com.ciberedu.Week02_Inheritance.Practica.E14.Book;
+import com.ciberedu.Week02_Inheritance.Practica.E14.Dvd;
 import com.ciberedu.Week02_Inheritance.Practica.E2.Empleado;
 import com.ciberedu.Week02_Inheritance.Practica.E2.EmpleadoTiempoCompleto;
 import com.ciberedu.Week02_Inheritance.Practica.E3.CuentaAhorro;
@@ -140,5 +142,18 @@ public class Main {
 
         System.out.println(circle.getArea());
         System.out.println(rectangle.getArea());
+
+        // PRACTICA 14:
+        //
+        System.out.println("Practica 14:");
+        Book book = new Book("120", "Libro", false, 230);
+        Dvd dvd = new Dvd("321", "Video", true, 128);
+
+        book.details();
+        dvd.details();
+
+        // PRACTICA 15:
+        //
+        System.out.println("Practica 15:");
     }
 }
