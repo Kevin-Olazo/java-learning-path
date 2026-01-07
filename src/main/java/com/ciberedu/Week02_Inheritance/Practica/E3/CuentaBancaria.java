@@ -5,8 +5,8 @@ public class CuentaBancaria {
     private double balance;
 
     public CuentaBancaria(String owner, double balance) {
-        this.owner = owner;
-        this.balance = balance;
+        setOwner(owner);
+        setBalance(balance);
     }
 
     public String getOwner() {
@@ -14,6 +14,9 @@ public class CuentaBancaria {
     }
 
     public void setOwner(String owner) {
+        if (owner == null || owner.isEmpty() || owner.trim().length() < 2) {
+            throw new IllegalArgumentException("Invalid name");
+        }
         this.owner = owner;
     }
 
@@ -21,7 +24,29 @@ public class CuentaBancaria {
         return balance;
     }
 
-    public void setBalance(double balance) {
+    // setBalance must be private or protected
+    private void setBalance(double balance) {
+        if (balance < 0) {
+            throw new IllegalArgumentException("Balance can not be negative");
+        }
         this.balance = balance;
+    }
+
+    //
+    public void withdraw(double amount) {
+        if (amount <= 0) {
+            throw new IllegalArgumentException("Enter a valid amount to withdraw");
+        } else if (amount > balance){
+            throw new IllegalArgumentException("Insufficient funds.");
+        }
+        balance = balance - amount;
+
+    }
+
+    public void deposit(double amount) {
+        if (amount <= 0) {
+            throw new IllegalArgumentException("Enter a valid amount to deposit");
+        }
+        balance = balance + amount;
     }
 }
