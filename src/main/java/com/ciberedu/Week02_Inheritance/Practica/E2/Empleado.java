@@ -5,6 +5,7 @@ public class Empleado {
     private double baseSalary;
 
     public Empleado(String id, String name, double baseSalary) {
+        if (baseSalary < 0) throw new IllegalArgumentException("Base salary no puede ser negativo");
         this.id = id;
         this.name = name;
         this.baseSalary = baseSalary;

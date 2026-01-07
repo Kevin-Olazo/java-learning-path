@@ -11,7 +11,7 @@ public class Estudiante extends Persona {
     @Override
     public void describe() {
         super.describe();
-        System.out.print("Student code: " + studentCode);
+        System.out.println("Student code: " + studentCode);
 
     }
 }

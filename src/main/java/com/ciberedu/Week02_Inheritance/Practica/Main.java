@@ -11,6 +11,9 @@ import com.ciberedu.Week02_Inheritance.Practica.E13.Circle;
 import com.ciberedu.Week02_Inheritance.Practica.E13.Rectangle;
 import com.ciberedu.Week02_Inheritance.Practica.E14.Book;
 import com.ciberedu.Week02_Inheritance.Practica.E14.Dvd;
+import com.ciberedu.Week02_Inheritance.Practica.E15.Bike;
+import com.ciberedu.Week02_Inheritance.Practica.E15.BikeType;
+import com.ciberedu.Week02_Inheritance.Practica.E15.Bus;
 import com.ciberedu.Week02_Inheritance.Practica.E2.Empleado;
 import com.ciberedu.Week02_Inheritance.Practica.E2.EmpleadoTiempoCompleto;
 import com.ciberedu.Week02_Inheritance.Practica.E3.CuentaAhorro;
@@ -155,5 +158,11 @@ public class Main {
         // PRACTICA 15:
         //
         System.out.println("Practica 15:");
+        Bike bike1 = new Bike(2, 120, 2, BikeType.ROAD);
+        Bus bus1 = new Bus(30, 80, 4, "Chino S.A" );
+
+
+        System.out.println(bike1.summary());
+        System.out.println(bus1.summary());
     }
 }

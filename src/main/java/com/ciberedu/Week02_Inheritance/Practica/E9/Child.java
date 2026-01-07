@@ -10,6 +10,4 @@ public class Child extends Base {
         // Intento 2: Acceder al atributo privado
         System.out.println("Puedo ver: " + getPrivado());
     }
-
-
 }

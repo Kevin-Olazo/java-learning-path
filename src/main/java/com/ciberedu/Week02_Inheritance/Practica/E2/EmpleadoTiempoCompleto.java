@@ -5,7 +5,12 @@ public class EmpleadoTiempoCompleto extends Empleado {
 
     public EmpleadoTiempoCompleto(String id, String name, double baseSalary, double bonus) {
         super(id, name, baseSalary);
+        if (bonus < 0) throw new IllegalArgumentException("Bonus no puede ser negativo");
         this.bonus = bonus;
+    }
+
+    public double getBonus() {
+        return bonus;
     }
 
     public double getTotalPay() {
