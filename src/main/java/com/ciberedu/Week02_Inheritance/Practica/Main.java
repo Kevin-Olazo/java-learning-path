@@ -12,8 +12,11 @@ import com.ciberedu.Week02_Inheritance.Practica.E6.Carro;
 import com.ciberedu.Week02_Inheritance.Practica.E6.Motocicleta;
 import com.ciberedu.Week02_Inheritance.Practica.E7.Gato;
 import com.ciberedu.Week02_Inheritance.Practica.E7.Perro;
-import com.ciberedu.Week02_Inheritance.Practica.E8.Child;
-import com.ciberedu.Week02_Inheritance.Practica.E9.Children;
+import com.ciberedu.Week02_Inheritance.Practica.E8.A;
+import com.ciberedu.Week02_Inheritance.Practica.E8.B;
+import com.ciberedu.Week02_Inheritance.Practica.E8.C;
+import com.ciberedu.Week02_Inheritance.Practica.E9.Child;
+import com.ciberedu.Week02_Inheritance.Practica.E10.Children;
 
 import java.time.LocalDate;
 
@@ -83,14 +86,25 @@ public class Main {
         pisco.describe();
 
         // PRACTICA 8:
-        // Child extends Base
+        // C extends B, B extends A
         System.out.println("Practica 8:");
+        System.out.println("A:");
+        A a = new A();
+        System.out.println("B:");
+        B b = new B();
+        System.out.println("C:");
+        C c = new C();
+
+
+        // PRACTICA 9:
+        // Child extends Base
+        System.out.println("Practica 9:");
         Child child = new Child();
         child.intentarAcceso();
 
-        // PRACTICA 9:
+        // PRACTICA 10:
         // Children extends Parent
-        System.out.println("Practica 9:");
+        System.out.println("Practica 10:");
         Children children = new Children();
 
         children.imprimir();

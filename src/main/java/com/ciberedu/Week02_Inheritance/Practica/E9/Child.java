@@ -1,4 +1,4 @@
-package com.ciberedu.Week02_Inheritance.Practica.E8;
+package com.ciberedu.Week02_Inheritance.Practica.E9;
 
 public class Child extends Base {
     private String name;

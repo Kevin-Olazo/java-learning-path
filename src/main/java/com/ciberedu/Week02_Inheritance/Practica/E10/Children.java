@@ -1,4 +1,4 @@
-package com.ciberedu.Week02_Inheritance.Practica.E9;
+package com.ciberedu.Week02_Inheritance.Practica.E10;
 
 public class Children extends Parent{
     String type = "child";
