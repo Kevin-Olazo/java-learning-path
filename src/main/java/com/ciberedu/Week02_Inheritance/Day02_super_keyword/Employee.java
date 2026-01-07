@@ -20,6 +20,14 @@ public class Employee {
         return baseSalary;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public double getBaseSalary() {
+        return baseSalary;
+    }
+
     public void displayInfo() {
         System.out.println("Name: [" + name + "] | Salary: [" + baseSalary + "]");
     }
