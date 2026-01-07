@@ -7,6 +7,9 @@ import com.ciberedu.Week02_Inheritance.Practica.E2.Empleado;
 import com.ciberedu.Week02_Inheritance.Practica.E2.EmpleadoTiempoCompleto;
 import com.ciberedu.Week02_Inheritance.Practica.E3.CuentaAhorro;
 import com.ciberedu.Week02_Inheritance.Practica.E4.ProductoPerecible;
+import com.ciberedu.Week02_Inheritance.Practica.E5.Laptop;
+import com.ciberedu.Week02_Inheritance.Practica.E6.Carro;
+import com.ciberedu.Week02_Inheritance.Practica.E6.Motocicleta;
 
 import java.time.LocalDate;
 
@@ -52,6 +55,19 @@ public class Main {
         System.out.println(proper.isExpired());
 
         // PRACTICA 5:
+        // Laptop extends Dispositivo
+        System.out.println("Practica 5:");
+        Laptop laptop = new Laptop("DELL", "SN-1230", 32, 990);
+        laptop.specs();
+
+        // PRACTICA 6:
+        // Carro, Motocicleta extends Vehiculo
+        System.out.println("Practica 6:");
+        Carro car1 = new Carro("Toyota", "Yaris", 2014,4);
+        Motocicleta moto1 = new Motocicleta("Yamaha", "R120", 2018, false);
+
+        car1.info();
+        moto1.info();
 
 
     }
