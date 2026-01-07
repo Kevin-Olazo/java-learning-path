@@ -5,6 +5,8 @@ import com.ciberedu.Week02_Inheritance.Practica.E1.Estudiante;
 import com.ciberedu.Week02_Inheritance.Practica.E1.Persona;
 import com.ciberedu.Week02_Inheritance.Practica.E11.Report;
 import com.ciberedu.Week02_Inheritance.Practica.E11.TextDocument;
+import com.ciberedu.Week02_Inheritance.Practica.E12.Address;
+import com.ciberedu.Week02_Inheritance.Practica.E12.Employee;
 import com.ciberedu.Week02_Inheritance.Practica.E2.Empleado;
 import com.ciberedu.Week02_Inheritance.Practica.E2.EmpleadoTiempoCompleto;
 import com.ciberedu.Week02_Inheritance.Practica.E3.CuentaAhorro;
@@ -112,10 +114,20 @@ public class Main {
         children.imprimir();
 
         // PRACTICA 11:
+        // Report extends TextDocument
+        System.out.println("Practica 11:");
         TextDocument td = new TextDocument("Prueba", "Hola, esto es una prueba para contar palabras");
-        Report rp = new Report("ReportePrueba", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "Unknown", "IT");
+        Report rp = new Report("Reporte Prueba", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "Unknown", "IT");
 
         System.out.println(td.wordCount());
         System.out.println(rp.wordCount());
+        rp.printHeader();
+
+        // PRACTICA 12:
+        Address address = new Address("Cayran", "Lima");
+        Employee employee = new Employee(address, "123");
+
+        employee.fullInfo();
+
     }
 }
