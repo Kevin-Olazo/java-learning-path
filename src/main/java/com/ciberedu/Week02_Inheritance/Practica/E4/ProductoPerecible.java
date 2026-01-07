@@ -11,6 +11,6 @@ public class ProductoPerecible extends Producto {
     }
 
     public boolean isExpired() {
-        return LocalDate.now().isAfter(expirationDate);
+        return !LocalDate.now().isBefore(expirationDate); // Hoy o Después;
     }
 }
