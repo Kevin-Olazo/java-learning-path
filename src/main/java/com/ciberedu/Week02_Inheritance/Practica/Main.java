@@ -6,6 +6,9 @@ import com.ciberedu.Week02_Inheritance.Practica.E1.Persona;
 import com.ciberedu.Week02_Inheritance.Practica.E2.Empleado;
 import com.ciberedu.Week02_Inheritance.Practica.E2.EmpleadoTiempoCompleto;
 import com.ciberedu.Week02_Inheritance.Practica.E3.CuentaAhorro;
+import com.ciberedu.Week02_Inheritance.Practica.E4.ProductoPerecible;
+
+import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
@@ -42,6 +45,14 @@ public class Main {
         System.out.println(cuentaAhorro.getBalance());
 
         // PRACTICA 4:
+        // ProductoPerecible extends Producto
         System.out.println("Practica 4:");
+        ProductoPerecible proper = new ProductoPerecible("Leche", 10.20, LocalDate.of(2024,10,3));
+
+        System.out.println(proper.isExpired());
+
+        // PRACTICA 5:
+
+
     }
 }
