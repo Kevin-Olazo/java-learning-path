@@ -14,8 +14,7 @@ public class AnimalShelter {
 
         for (Animal a : animals) {
             a.makeSound();
-            if (a instanceof Dog) {
-                Dog d = (Dog) a;
+            if (a instanceof Dog d) {
                 d.guardHouse();
             }
         }
