@@ -11,5 +11,6 @@ public class VetClinic {
         if (a instanceof Cat c) {
             c.purr();
         }
+
     }
 }
