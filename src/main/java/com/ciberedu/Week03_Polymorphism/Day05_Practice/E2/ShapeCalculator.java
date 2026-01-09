@@ -13,24 +13,25 @@ public class ShapeCalculator {
     }
 
     public Shape findLargestShape(Shape[] shapes) {
-        if (shapes == null) {
+        if (shapes == null || shapes.length == 0) {
             throw new IllegalArgumentException("Shapes array cannot be null");
         }
 
-        Shape largestShape = shapes[0];
-        double largestArea = shapes[0].calculateArea();
+        Shape largestShape = null;
+        double largestArea = 0;
 
-        for (int i = 1; i < shapes.length; i++) {
-            if (shapes[i] == null) {
-                break;
+        for (Shape shape : shapes) {
+            if (shape == null) {
+                continue;
             }
 
-            if (shapes[i].calculateArea() > largestArea) {
-                largestArea = shapes[i].calculateArea();
-                largestShape = shapes[i];
+            if (shape.calculateArea() > largestArea) {
+                largestArea = shape.calculateArea();
+                largestShape = shape;
             }
         }
 
         return largestShape;
+
     }
 }
