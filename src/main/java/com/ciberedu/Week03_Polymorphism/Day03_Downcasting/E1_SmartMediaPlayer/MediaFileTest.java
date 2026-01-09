@@ -67,6 +67,22 @@ public class MediaFileTest {
         }
         System.out.println("4K Videos: " + videos4k + ", Instrumental: " + instrumentalSongs);
     }
+
+    public void handleSearch(Object query) {
+        if (query == null) {
+            throw new IllegalArgumentException("Query cannot be null");
+        }
+
+        if (query instanceof String s && !s.isEmpty()) {
+            System.out.println("Searching for keyword: " + s);
+        } else if (query instanceof Integer i) {
+            System.out.println("Searching by ID: " + i);
+//        } else if (query instanceof Product p) {
+//            System.out.println("Opening product:" + p.getName());
+//        } else {
+            throw new IllegalArgumentException("Unknown search type");
+        }
+    }
 }
 
 
