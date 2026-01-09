@@ -58,15 +58,11 @@ public class MediaFileTest {
         int videos4k = 0;
         int instrumentalSongs = 0;
         for (MediaFile f : playlist) {
-            if (f instanceof Video v) {
-                if (v.is4K()) {
-                    videos4k++;
-                }
+            if (f instanceof Video v && v.is4K()) {
+                videos4k++;
             }
-            if (f instanceof Song s) {
-                if (s.isInstrumental()) {
-                    instrumentalSongs++;
-                }
+            if (f instanceof Song s && s.isInstrumental()) {
+                instrumentalSongs++;
             }
         }
         System.out.println("4K Videos: " + videos4k + ", Instrumental: " + instrumentalSongs);
