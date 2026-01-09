@@ -34,7 +34,11 @@ public class Main {
         hauntedHouse.startSpooking();
 
         for (Monster m : hauntedHouse.getMonsters()) {
-            hauntedHouse.destroyMonster(m);
+            // Added validation to continue when monster is not null
+            if (m != null) {
+                hauntedHouse.destroyMonster(m);
+            }
+
         }
 
     }
