@@ -37,7 +37,7 @@ public abstract class RentalVehicle {
 
     // ABSTRACT METHODS
 
-    public abstract double calculateTotalCost();
+    public abstract double calculateTotalCost(int days);
     public abstract void performMaintenance();
 
     // GETTERS AND SETTERS
