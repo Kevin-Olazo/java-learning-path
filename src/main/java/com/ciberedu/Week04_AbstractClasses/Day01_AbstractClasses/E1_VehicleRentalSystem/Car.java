@@ -8,6 +8,13 @@ public class Car extends RentalVehicle {
         this.hasGPS = hasGPS;
     }
 
+    public boolean isHasGPS() {
+        return hasGPS;
+    }
+
+    public void setHasGPS(boolean hasGPS) {
+        this.hasGPS = hasGPS;
+    }
 
     @Override
     public double calculateTotalCost(int days) {
