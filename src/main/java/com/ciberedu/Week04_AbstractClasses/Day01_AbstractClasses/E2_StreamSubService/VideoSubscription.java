@@ -27,7 +27,7 @@ public class VideoSubscription extends Subscription {
 
     @Override
     public void accessContent(String title) {
-        System.out.println("Streaming" + title + " on " + getScreenNumbers() + " screen(s)."  );
+        System.out.println("Streaming: " + title + " on " + getScreenNumbers() + " screen(s)."  );
     }
 
     public int getScreenNumbers() {
