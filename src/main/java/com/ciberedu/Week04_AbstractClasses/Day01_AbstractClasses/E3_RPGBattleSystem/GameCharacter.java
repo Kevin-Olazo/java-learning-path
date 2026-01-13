@@ -24,6 +24,7 @@ public abstract class GameCharacter {
     }
 
     public abstract void attack(GameCharacter opponent);
+    public abstract void specialAbility(GameCharacter opponent);
     public abstract void specialAbility();
 
     public String getName() {
@@ -41,4 +42,5 @@ public abstract class GameCharacter {
     public void setHealth(int health) {
         this.health = health;
     }
+
 }

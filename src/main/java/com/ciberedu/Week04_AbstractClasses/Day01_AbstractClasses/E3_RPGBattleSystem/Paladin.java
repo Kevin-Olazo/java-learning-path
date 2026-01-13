@@ -20,6 +20,11 @@ public class Paladin extends GameCharacter{
     }
 
     @Override
+    public void specialAbility(GameCharacter opponent) {
+
+    }
+
+    @Override
     public void specialAbility() {
         if (faithPoints >= 20) {
             setHealth(getHealth() + 15);
