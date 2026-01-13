@@ -13,14 +13,13 @@ public class VideoSubscription extends Subscription {
     public double calculateMonthlyFee() {
         switch (getPlanType()) {
             case "Standard" -> {
-                return getBasePrice() + 6;
+                return getBasePrice();
             }
             case "Premium" -> {
-                return getBasePrice() + (3.00 * getScreenNumbers());
+                return getBasePrice() + (2.00 * getScreenNumbers());
             }
-
             default -> {
-                return getBasePrice();
+                return getBasePrice() - 5;
             }
         }
 
@@ -28,7 +27,7 @@ public class VideoSubscription extends Subscription {
 
     @Override
     public void accessContent(String title) {
-        System.out.println("Streaming [title]" + " on " + getScreenNumbers() + " screen(s)."  );
+        System.out.println("Streaming" + title + " on " + getScreenNumbers() + " screen(s)."  );
     }
 
     public int getScreenNumbers() {

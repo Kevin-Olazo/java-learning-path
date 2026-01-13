@@ -19,7 +19,7 @@ public class MusicSubscription extends Subscription {
 
     @Override
     public void accessContent(String title) {
-        System.out.println("Playing song: [title] (Family Shared: " + isFamilyPlan() +  ")" );
+        System.out.println("Playing song:" + title + " (Family Shared: " + isFamilyPlan() + ")");
     }
 
     public boolean isFamilyPlan() {
