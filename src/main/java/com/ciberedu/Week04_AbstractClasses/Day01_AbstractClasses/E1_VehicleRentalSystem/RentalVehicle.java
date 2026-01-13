@@ -24,7 +24,7 @@ public abstract class RentalVehicle {
     }
 
     public void returnVehicle(long milesDriven) {
-        if (!isRented){
+        if (isRented){
             long newOdometer = this.odometerReading + milesDriven;
             setRented(false);
             setOdometerReading(newOdometer);
