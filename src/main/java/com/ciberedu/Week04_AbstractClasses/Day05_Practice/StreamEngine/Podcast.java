@@ -2,8 +2,9 @@ package com.ciberedu.Week04_AbstractClasses.Day05_Practice.StreamEngine;
 
 public class Podcast extends StreamingMedia{
     @Override
-    public void verifyRegion() {
+    public boolean verifyRegion(User user) {
         System.out.println("Checking blackout restriction for live event...");
+        return false;
     }
 
     @Override
