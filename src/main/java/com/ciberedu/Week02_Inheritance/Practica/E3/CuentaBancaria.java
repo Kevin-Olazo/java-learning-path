@@ -25,7 +25,7 @@ public class CuentaBancaria {
     }
 
     // setBalance must be private or protected
-    private void setBalance(double balance) {
+    protected void setBalance(double balance) {
         if (balance < 0) {
             throw new IllegalArgumentException("Balance can not be negative");
         }
