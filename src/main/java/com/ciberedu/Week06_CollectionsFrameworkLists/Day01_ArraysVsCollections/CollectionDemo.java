@@ -22,5 +22,7 @@ public class CollectionDemo {
             System.out.println(s);
         }
 
+        System.out.println(lista);
+
     }
 }

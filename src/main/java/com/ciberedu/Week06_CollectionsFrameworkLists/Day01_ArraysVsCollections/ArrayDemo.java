@@ -1,5 +1,7 @@
 package com.ciberedu.Week06_CollectionsFrameworkLists.Day01_ArraysVsCollections;
 
+import java.util.Arrays;
+
 // --- CLASE 1: La forma antigua (Dolorosa) ---
 public class ArrayDemo {
     public static void main(String[] args) {
@@ -17,9 +19,10 @@ public class ArrayDemo {
         String[] listaNueva = new String[4];
 
         // TODO 4: Copia manualmente los datos del viejo al nuevo.
-        listaNueva[0] = lista[0];
-        listaNueva[1] = lista[1];
-        listaNueva[2] = lista[2];
+        for(int i = 0; i < lista.length; i++){
+            listaNueva[i] = lista[i];
+        }
+
 
         // TODO 5: Agrega el nuevo elemento y muestra el resultado.
 
