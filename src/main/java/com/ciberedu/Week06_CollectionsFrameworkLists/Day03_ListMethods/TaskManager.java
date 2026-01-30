@@ -37,6 +37,15 @@ public class TaskManager {
         }
     }
 
+    public void updateTask(int index, String newTitle){
+        if (index  >= tasks.size() || index < 0){
+            System.out.println("no index");
+            return;
+        }
+
+        tasks.get(index).setTitle(newTitle);
+
+    }
 
     public void triggerCrash() {
         System.out.println("Intentando borrar con for-each (esto debería fallar)...");
