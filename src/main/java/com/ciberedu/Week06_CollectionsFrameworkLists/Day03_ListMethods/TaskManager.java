@@ -49,14 +49,12 @@ public class TaskManager {
 
     public void triggerCrash() {
         System.out.println("Intentando borrar con for-each (esto debería fallar)...");
-        // TODO: Escribe el for-each que falla al hacer remove()
         for (Task t : tasks) {
             tasks.remove(t);
         }
     }
 
     public void printAll() {
-        // TODO: Usa un Enhanced For-Loop (for-each) aquí solo para LECTURA
         for (Task t : tasks) {
             System.out.println(t.toString());
         }
