@@ -18,6 +18,7 @@ public class WordCounter {
 
         Map<String, Integer> map = new HashMap<>();
 
+
         for (String w : words) {
 
             if (map.containsKey(w)) {

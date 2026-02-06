@@ -10,5 +10,7 @@ public class Main {
         WordCounter counter = new WordCounter();
         System.out.println("\n--- Conteo de Palabras ---");
         System.out.println(counter.countWords("java es genial java es fuerte java java java"));
+
+
     }
 }

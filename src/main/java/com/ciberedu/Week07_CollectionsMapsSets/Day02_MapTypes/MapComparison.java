@@ -45,6 +45,10 @@ public class MapComparison {
         treeMap.put(valor3,numero3);
         treeMap.put(valor4,numero4);
 
+        WordCounter nw = new WordCounter();
+
+
+
 
         // TODO: Imprime los 3 mapas para ver la diferencia de orden visualmente
         System.out.println("--- Comparación de Orden ---");
