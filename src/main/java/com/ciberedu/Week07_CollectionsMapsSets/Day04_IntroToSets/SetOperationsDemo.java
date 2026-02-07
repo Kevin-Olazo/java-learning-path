@@ -40,9 +40,10 @@ public class SetOperationsDemo {
         tm.addTag("Hola");
         tm.addTag("Java");
         tm.addTag("Burro");
+        tm.addTag("java");
         tm.addTag("Python");
         tm.addTag("Alejus");
-        tm.addTag("Java");
+        tm.addTag("JavA");
 
         System.out.println(tm.tagExists("Java"));
 

@@ -11,9 +11,8 @@ public class TagManager {
         this.tags = new HashSet<>();
     }
 
-
     public boolean addTag(String tag) {
-        return tags.add(tag);
+        return tags.add(tag.toLowerCase());
     }
 
     public boolean tagExists(String tag) {
