@@ -19,8 +19,6 @@ public class SensorMonitor {
             // 3. Asegúrate de que sensor.close() se llame SIEMPRE en el finally
             sensor.close();
         }
-
-
     }
 
     public static void main(String[] args) {
