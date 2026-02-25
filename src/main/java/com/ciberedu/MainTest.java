@@ -2,9 +2,29 @@ package com.ciberedu;
 
 import java.util.*;
 
-public class MainTest {
+class MainTest {
+
     public static void main(String[] args) {
 
+        System.out.println(isAnagram("rat", "tar"));
     }
+
+    public static boolean isAnagram(String s, String t) {
+
+        if (s.length() != t.length()) return false;
+
+        int[] alphabet = new int[26];
+
+        for(char c : s.toCharArray()) alphabet[c-'a']++;
+        for(char c : t.toCharArray()) alphabet[c-'a']--;
+
+        for (int count : alphabet){
+            if (count != 0) return false;
+        }
+
+        return true;
+
+    }
+
 
 }
