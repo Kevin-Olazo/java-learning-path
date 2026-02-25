@@ -49,6 +49,15 @@ public class GameSaveManager {
             System.out.println("Error al cargar la partida");
         }
 
+        try(
+                BufferedReader reader = new BufferedReader(new FileReader("recipes.txt"));
+                BufferedWriter writer = new BufferedWriter(new FileWriter("backup.txt"))) {
+
+
+        } catch(IOException ex) {
+            ex.printStackTrace();
+        }
+
         // Si ocurre un error o el archivo no existe, retornamos null
         return null;
     }
