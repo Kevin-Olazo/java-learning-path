@@ -1,10 +1,18 @@
 package com.ciberedu.week09_GenericsOptionals.day02_generic_method_bounds;
 
-public class MenuItem implements Comparable<MenuItem> {
+public class MenuItem {
     private String name;
     private double price;
 
     public MenuItem(String name, double price) {
+        if (name == null || name.trim().isEmpty()) {
+            throw new IllegalArgumentException("Name cannot be null or empty");
+        }
+
+        if (price < 0) {
+            throw new IllegalArgumentException("Price cannot be negative");
+        }
+
         this.name = name;
         this.price = price;
     }
@@ -18,13 +26,7 @@ public class MenuItem implements Comparable<MenuItem> {
     }
 
     @Override
-    public int compareTo(MenuItem o) {
-        return Double.compare(this.price, o.price);
-    }
-
-    @Override
     public String toString() {
-        return "name='" + name + '\'' +
-                ", price=" + price;
+        return name + " ($" + price + ")";
     }
 }

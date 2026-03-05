@@ -5,14 +5,14 @@ import java.util.List;
 public class MenuUtilities {
 
     public static <T extends MenuItem> double calculateTotal(List<T> items){
-        double total = 0;
+        double total = 0.0;
         for(T item : items){
             total += item.getPrice();
         }
         return total;
     }
 
-    public static <T extends MenuItem & Comparable<MenuItem>> T findMax(List<T> items){
+    public static <T extends MenuItem & Comparable<T>> T findMax(List<T> items){
         if (items == null || items.isEmpty()){
             throw new IllegalArgumentException("List cannot be null or empty");
         }
@@ -23,6 +23,7 @@ public class MenuUtilities {
                 max = item;
             }
         }
+
         return max;
     }
 
