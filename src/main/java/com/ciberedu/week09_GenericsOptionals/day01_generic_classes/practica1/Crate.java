@@ -1,4 +1,4 @@
-package com.ciberedu.week09_GenericsOptionals.day01_generic_classes.practica;
+package com.ciberedu.week09_GenericsOptionals.day01_generic_classes.practica1;
 
 public class Crate<T> {
     private T item;
