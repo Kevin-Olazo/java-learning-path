@@ -4,6 +4,7 @@ public class VehicleGarage {
 
     private Container<Vehicle> vehicles = new Container<>();
 
+
     public void park(Vehicle car){
         this.vehicles.add(car);
     }

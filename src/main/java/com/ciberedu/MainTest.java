@@ -1,29 +1,27 @@
 package com.ciberedu;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.*;
+import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.toList;
 
 class MainTest {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println(isAnagram("rat", "tar"));
-    }
+        int n = Integer.parseInt(bufferedReader.readLine().trim());
 
-    public static boolean isAnagram(String s, String t) {
+        List<Integer> arr = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
+                .map(Integer::parseInt)
+                .collect(toList());
 
-        if (s.length() != t.length()) return false;
 
-        int[] alphabet = new int[26];
 
-        for(char c : s.toCharArray()) alphabet[c-'a']++;
-        for(char c : t.toCharArray()) alphabet[c-'a']--;
-
-        for (int count : alphabet){
-            if (count != 0) return false;
-        }
-
-        return true;
-
+        bufferedReader.close();
     }
 
 

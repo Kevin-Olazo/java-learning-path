@@ -26,6 +26,11 @@ public class MenuUtilities {
 
         return max;
     }
+    // Wildcard method to print any list of items
+    // This method can accept a list of any type, but we won't be able to call any specific methods on the items
+    // We can only call methods that are available on Object, such as toString()
+    // This is useful for printing a list of items without needing to know their specific type
+    // Note: We cannot use T here because T is not defined in this method, we need to use a wildcard
 
     public static void printMenu(List<?> items){
         for (Object item : items){
