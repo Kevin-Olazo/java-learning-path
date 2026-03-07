@@ -1,5 +1,6 @@
 package com.ciberedu.week09_GenericsOptionals.day03_collecions_type_erasure;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -35,6 +36,16 @@ public class Hospital {
     }
 
     public void demonstrateRawTypeDanger(){
+        List dangerList = new ArrayList();
+        Patient p1 = new Patient("o2","daniel", 30);
+        dangerList.add(p1);
+        String s1 = "Soy un intruso";
+        dangerList.add(s1);
+
+        for(int i = 0; i < dangerList.size(); i++){
+            Patient p = (Patient) dangerList.get(i);
+            p.getName();
+        }
 
     }
 
