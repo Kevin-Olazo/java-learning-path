@@ -11,17 +11,39 @@ import static java.util.stream.Collectors.toList;
 class MainTest {
 
     public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        // 1. Crea scanner
+        Scanner in = new Scanner(System.in);
+        // 2. Obtenemos el numero de contactos (n)
+        int n = in.nextInt();
+        in.nextLine();
+        // 3. Creo el mapa para agregar los contactos
+        Map<String, Integer> phoneBook = new HashMap<>();
 
-        int n = Integer.parseInt(bufferedReader.readLine().trim());
+        // 4. Itero la cantidad de veces (n) para agregar contactos
+        for(int i = 0; i < n; i++){
+            // 4.1. Obtengo el nombre
+            String name = in.next();
+            // 4.2. Obtengo el telefono
+            int phone = in.nextInt();
+            // Write code here
+            in.nextLine();
+            phoneBook.put(name, phone);
+        }
 
-        List<Integer> arr = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
-                .map(Integer::parseInt)
-                .collect(toList());
+        // 5. While loop para ingresar busqueda de nombre para obtener contacto
+        while(in.hasNext()){
+            // 5.1. Obtengo el nombre de contacto
+            String s = in.next();
+            // Write code here
+            if(phoneBook.containsKey(s)){
+                System.out.println(s + "=" + phoneBook.get(s));
+            } else {
+                System.out.println("Not found!");
+            }
 
+        }
 
-
-        bufferedReader.close();
+        in.close();
     }
 
 
