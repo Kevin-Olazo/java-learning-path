@@ -11,20 +11,32 @@ import static java.util.stream.Collectors.toList;
 class MainTest {
 
     public static void main(String[] args) throws IOException {
-        System.out.println("Factorial de 0: " + factorial(0));
-        System.out.println("Factorial de 1: " + factorial(1));
-        System.out.println("Factorial de 2: " + factorial(2));
-        System.out.println("Factorial de 3: " + factorial(3));
-        System.out.println("Factorial de 5: " + factorial(5));
+        // convertir entero n a binario
+
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
+        int n = Integer.parseInt(bufferedReader.readLine().trim());
+
+        String binaryString = Integer.toBinaryString(n);
+
+        int count = 0;
+        int maxCount = 0;
+
+        for(char c : binaryString.toCharArray()) {
+            if(c == '1'){
+                count++;
+                maxCount = Math.max(count, maxCount);
+            } else {
+                count = 0;
+            }
+        }
+
+        bufferedReader.close();
+
 
 
     }
 
-    //Recursive
-    public static int factorial(int n) {
-        if (n == 0) return 1;
-        return n * factorial(n - 1);
-    }
 
 
 
