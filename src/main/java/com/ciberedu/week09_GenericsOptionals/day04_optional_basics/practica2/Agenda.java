@@ -17,8 +17,8 @@ public class Agenda {
     // Si no existe, retorna Optional vacío.
     public Optional<Contacto> buscarPorNombre(String nombre) {
         // Tu código aquí
-        for(Contacto c : contactos){
-            if (nombre.equals(c.getNombre())){
+        for (Contacto c : contactos) {
+            if (nombre.equals(c.getNombre())) {
                 return Optional.of(c);
             }
         }
@@ -33,8 +33,5 @@ public class Agenda {
         // Tu código aquí
         // 💡 Pista: puedes usar buscarPorNombre() + map()
         return buscarPorNombre(nombre).map(c -> c.getTelefono());
-
-
-
     }
 }
