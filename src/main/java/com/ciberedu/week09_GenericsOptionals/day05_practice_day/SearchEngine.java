@@ -30,6 +30,8 @@ public class SearchEngine {
     // then use filter to only keep it if it's a TECHNICAL book.
     public static Optional<eBook> getRecentTechBookFromAuthor(Author author) {
         // Your code here
-        return author.getMostRecentBook().filter((b) -> b.getGenre().equals(Genre.TECHNICAL));
+        return Optional.of(author)
+                .flatMap(Author::getMostRecentBook)
+                .filter(b -> b.getGenre().equals(Genre.TECHNICAL));
     }
 }
