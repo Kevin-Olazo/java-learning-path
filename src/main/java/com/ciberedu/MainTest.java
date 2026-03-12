@@ -1,30 +1,43 @@
 package com.ciberedu;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.*;
+import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.toList;
 
 class MainTest {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        // convertir entero n a binario
 
-        System.out.println(isAnagram("rat", "tar"));
-    }
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
-    public static boolean isAnagram(String s, String t) {
+        int n = Integer.parseInt(bufferedReader.readLine().trim());
 
-        if (s.length() != t.length()) return false;
+        String binaryString = Integer.toBinaryString(n);
 
-        int[] alphabet = new int[26];
+        int count = 0;
+        int maxCount = 0;
 
-        for(char c : s.toCharArray()) alphabet[c-'a']++;
-        for(char c : t.toCharArray()) alphabet[c-'a']--;
-
-        for (int count : alphabet){
-            if (count != 0) return false;
+        for(char c : binaryString.toCharArray()) {
+            if(c == '1'){
+                count++;
+                maxCount = Math.max(count, maxCount);
+            } else {
+                count = 0;
+            }
         }
 
-        return true;
+        bufferedReader.close();
+
+
 
     }
+
+
 
 
 }
