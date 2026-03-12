@@ -16,18 +16,28 @@ public class Library<T extends eBook> {
     }
 
    public Optional<T> findBookByISBN(String isbn){
-
+        for (T book : books){
+            if (isbn.equals(book.getIsbn())){
+                return Optional.of(book);
+            }
+        }
 
         return Optional.empty();
    }
 
    public List<T> findBooksByAuthor(Author author){
+        List<T> booksFound = new ArrayList<>();
 
-        return new ArrayList<>();
+        for (T book : books){
+            if (author.equals(book.getAuthor())){
+                booksFound.add(book);
+            }
+        }
+
+        return booksFound;
    }
 
    public String getAuthorNameByBookISBN(String isbn){
-
-        return "Unknown Author";
+        return findBookByISBN(isbn).map((b) -> b.getAuthor().getName()).orElse("No encontrado");
    }
 }

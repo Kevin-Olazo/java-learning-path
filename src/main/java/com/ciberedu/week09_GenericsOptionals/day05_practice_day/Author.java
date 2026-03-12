@@ -1,8 +1,6 @@
 package com.ciberedu.week09_GenericsOptionals.day05_practice_day;
 
-import javax.swing.text.html.Option;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -33,6 +31,4 @@ public class Author {
 
         return Optional.of(writtenBooks.get(writtenBooks.size() - 1));
     }
-
-
 }
